@@ -13,9 +13,8 @@
   }
 
   &__link {
-    display: block;
     position: sticky;
-    top: 88vh;
+    top: 90vh;
     width: 30px;
     height: 30px;
     background-image: url(../images/up_button.png);
@@ -26,5 +25,23 @@
     border: 1px solid $mainDark;
     border-radius: 50%;
     color: $mainAcent;
+
+    &:hover {
+      background-color: $mainAcentHover;
+    }
+
+    &:active {
+      background-color: $mainAcentActive;
+    }
+
+    @include onDesktop {
+      width: 40px;
+      height: 40px;
+      top: 95vh;
+
+      &:hover {
+        scale: 1.5;
+      }
+    }
   }
 }
